@@ -10,20 +10,19 @@ provided by the psutils set of tasks. Specifically, we are going to:
 
 And compare results!
 
-## Scripts Included
+## Included
 
 This is a fairly simple analysis in that I could install [watchme](https://www.github.com/vsoch/watchme)
 and then write a few quick scripts, run, and be done! 
 
  - [run_job.sh](run_job.sh) will submit job.sh to the cluster, specifying input parameters and outputs
  - [job.sh](job.sh) is submit to different nodes with varying memory, each 5 times
-
-
-## Folders Included
-
  - [data](data) is where output data is written to, including json results files and images from the training.
 
-## 1. Setup
+
+## Usage
+
+### 1. Setup
 
 Specifically, to install watchme:
 
@@ -48,7 +47,7 @@ $ watchme create watchme-mnist
 We aren't going to be using .git as a temporal database, but it's still handy
 to use watchme to create the repo for us :)
 
-## 2. Mnist on the Sherlock Cluster
+### 2. Mnist on the Sherlock Cluster
 
 This was the script [job.sh](job.sh) submit via [run_job.sh](run_job.sh) and we
 first export some variables to the environment to be added to our data:
