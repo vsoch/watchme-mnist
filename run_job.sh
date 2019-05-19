@@ -21,7 +21,7 @@ name="watchme-mnist-cpu"
 # named based on the run.
 
 for iter in 1 2 3 4 5; do
-    for nproc in 1..32 ; do
+    for nproc in {1..32} ; do
         output="${outdir}/${name}-iter${iter}-proc${nproc}"
         echo "sbatch --mem=12GB job.sh ${nproc} ${iter} ${name} ${output}"            
         sbatch --partition owners --mem=12GB -n ${nproc} job.sh "${nproc}" "${iter}" "${name}" ${output}
